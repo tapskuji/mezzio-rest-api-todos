@@ -27,3 +27,7 @@ VALUES
        (3,'Mezzio PHP TODO List',0,'2022-02-09 13:05:10');
 
 UNLOCK TABLES;
+
+-- SHOW DATABASES;
+-- USE `todos`;
+-- SELECT * FROM `todos`;
