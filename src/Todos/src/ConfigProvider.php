@@ -31,6 +31,11 @@ class ConfigProvider
     public function getDependencies() : array
     {
         return [
+            'delegators' => [
+                \Mezzio\Application::class => [
+                    RoutesDelegator::class,
+                ],
+            ],
             'invokables' => [
             ],
             'factories'  => [
