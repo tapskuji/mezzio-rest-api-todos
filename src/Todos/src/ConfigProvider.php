@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Todos;
 
+use Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain;
+use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
+
 /**
  * The configuration provider for the Todos module
  *
@@ -22,6 +25,7 @@ class ConfigProvider
         return [
             'dependencies' => $this->getDependencies(),
             'templates'    => $this->getTemplates(),
+            'doctrine'    => $this->getDoctrineEntities(),
         ];
     }
 
@@ -52,6 +56,29 @@ class ConfigProvider
         return [
             'paths' => [
                 'todos'    => [__DIR__ . '/../templates/'],
+            ],
+        ];
+    }
+
+    /**
+     * Maps the doctrine entity
+     * @return \array[][]
+     */
+    public function getDoctrineEntities() : array
+    {
+        return [
+            'driver' => [
+                'orm_default' => [
+                    'class' => MappingDriverChain::class,
+                    'drivers' => [
+                        'Todos\Entity' => 'todo_entity',
+                    ],
+                ],
+                'todo_entity' => [
+                    'class' => AnnotationDriver::class,
+                    'cache' => 'array',
+                    'paths' => [__DIR__ . '/Entity'],
+                ],
             ],
         ];
     }
