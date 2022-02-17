@@ -34,6 +34,7 @@ class ConfigProvider
             'invokables' => [
             ],
             'factories'  => [
+                Handler\TodosReadAllHandler::class => Handler\TodosReadAllHandlerFactory::class,
             ],
         ];
     }
