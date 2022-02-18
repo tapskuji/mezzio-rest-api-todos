@@ -20,6 +20,7 @@ class RoutesDelegator
 
         /* Setup routes here */
         // create
+        $app->post('/api/todos', Handler\TodosCreateHandler::class, 'api.todos.create');
         // read
         $app->get('/api/todos[/]', Handler\TodosReadAllHandler::class, 'api.todos.list');
         $app->get('/api/todos/id={id:\d+}', Handler\TodosReadHandler::class, 'api.todos.read');
