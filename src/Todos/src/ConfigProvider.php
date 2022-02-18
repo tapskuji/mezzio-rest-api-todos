@@ -47,6 +47,7 @@ class ConfigProvider
                 Handler\TodosReadHandler::class => Handler\TodosReadHandlerFactory::class,
                 Handler\TodosCreateHandler::class => Handler\TodosCreateHandlerFactory::class,
                 Handler\TodosUpdateHandler::class => Handler\TodosUpdateHandlerFactory::class,
+                Handler\TodosDeleteHandler::class => Handler\TodosDeleteHandlerFactory::class,
             ],
         ];
     }

@@ -27,6 +27,7 @@ class RoutesDelegator
         // update
         $app->put('/api/todos/id={id:\d+}', Handler\TodosUpdateHandler::class, 'api.todos.update');
         // delete
+        $app->delete('/api/todos/id={id:\d+}', Handler\TodosDeleteHandler::class, 'api.todos.delete');
 
         return $app;
     }
