@@ -44,6 +44,7 @@ class ConfigProvider
             ],
             'factories'  => [
                 Handler\TodosReadAllHandler::class => Handler\TodosReadAllHandlerFactory::class,
+                Handler\TodosReadHandler::class => Handler\TodosReadHandlerFactory::class,
             ],
         ];
     }

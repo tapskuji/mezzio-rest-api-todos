@@ -40,6 +40,7 @@
         "php": "^7.2",
         "composer/package-versions-deprecated": "^1.10.99",
         "dasprid/container-interop-doctrine": "^1.1",
+        "doctrine/doctrine-laminas-hydrator": "^2.1",
         "laminas/laminas-component-installer": "^2.1.2",
         "laminas/laminas-config-aggregator": "^1.2",
         "laminas/laminas-diactoros": "^2.3.0",

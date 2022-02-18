@@ -13,7 +13,6 @@ declare(strict_types=1);
 return [
     'dependencies' => [
         'factories' => [
-//            Todos\Handler\TodosReadAllHandler::class => Todos\Handler\TodosReadAllHandlerFactory::class,
         ],
     ],
 ];
