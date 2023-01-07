@@ -65,7 +65,9 @@ class ConfigProvider
     }
 
     /**
-     * Maps the doctrine entity
+     * This is a module-specific configuration
+     * Maps the doctrine entity or rather
+     * Contains the entity location settings
      * @return \array[][]
      */
     public function getDoctrineEntities() : array
